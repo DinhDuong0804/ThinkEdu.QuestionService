@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>ThinkEdu_Question_Service.Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  
+
+  <ItemGroup>
+	  <PackageReference Include="CloudinaryDotNet" Version="1.27.5" />
+	  <PackageReference Include="FastEndpoints" Version="6.1.0" />
+	  <PackageReference Include="FastEndpoints.Swagger" Version="6.1.0" />
+	  <PackageReference Include="FirebaseAdmin" Version="3.2.0" />
+	  <PackageReference Include="Mapster" Version="7.4.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="EFCore.BulkExtensions" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+	  <PackageReference Include="FluentValidation" Version="12.0.0" />
+	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThinkEdu-Question-Service.Domain\ThinkEdu-Question-Service.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\LocalizedMessage.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizedMessage.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\LocalizedModel.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizedModel.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\LocalizedMessage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedMessage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\LocalizedMessage.en-us.resx">
+		  <DependentUpon>LocalizedMessage.resx</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\LocalizedMessage.vi-vn.resx">
+		  <DependentUpon>LocalizedMessage.resx</DependentUpon>
+	  </EmbeddedResource>
+    <EmbeddedResource Update="Resources\LocalizedModel.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedModel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\LocalizedModel.en-us.resx">
+		  <DependentUpon>LocalizedModel.resx</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\LocalizedModel.vi-vn.resx">
+		  <DependentUpon>LocalizedModel.resx</DependentUpon>
+	  </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
